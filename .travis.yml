@@ -14,7 +14,7 @@ after_success:
  - docker build -t mklie/multi-server ./server
  - docker build -t mklie/multi-worker ./worker
 # Log in to the docker CLI
- - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+ - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
 # Take images and push to docker hub
  - docker push mklie/multi-client
  - docker push mklie/multi-nginx
