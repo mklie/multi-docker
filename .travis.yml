@@ -16,6 +16,7 @@ after_success:
 # Log in to the docker CLI
  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
 # Take images and push to docker hub
+ - docker push mklie/multi-server
  - docker push mklie/multi-client
  - docker push mklie/multi-nginx
  - docker push mklie/multi-server
